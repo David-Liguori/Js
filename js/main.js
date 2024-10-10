@@ -1,27 +1,23 @@
-let edad = 22;
-let nombre = "David";
+let edad; 
+let nombre; 
 let apellido = "Liguori";
 
 const personasEnEsteTrabajo = 1;
-
 let animales = ["perro", "gato", "elefante"];
-
 animales.push("cabra");
 animales.unshift("leon");
 
-console.log("Lista de animales:");
-for (let i = 0; i < animales.length; i++) {
-    console.log(animales[i]);
+function iniciarSimulador() {
+    console.log("Por favor, ingresa tu nombre y edad en las variables correspondientes antes de ejecutar el simulador.");
+    console.log("Ejemplo: nombre = 'TuNombre'; edad = TuEdad;");
+
+  
+    console.log("Nombre actual: " + nombre);
+    console.log("Edad actual: " + edad);
+
+    mensajePorEdad();
+    procesarAnimales();
 }
-
-
-function preguntarNombre() {
-    let nombreDelUsuario = "Usuario"; 
-    console.log("¿Cuál es tu nombre?");
-    
-    console.log("¡Hola " + nombreDelUsuario + "!");
-}
-
 
 function procesarAnimales() {
     console.log("Número total de animales: " + animales.length);
@@ -31,7 +27,6 @@ function procesarAnimales() {
     }
 }
 
-
 function mensajePorEdad() {
     if (edad < 18) {
         console.log("Eres menor de edad.");
@@ -40,12 +35,7 @@ function mensajePorEdad() {
     }
 }
 
-window.onload=function() {
-    preguntarNombre();
-    procesarAnimales();
-    mensajePorEdad();
-};
-
+iniciarSimulador();
 
 
 
